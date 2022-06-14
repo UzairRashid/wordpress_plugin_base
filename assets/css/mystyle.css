@@ -1,0 +1,59 @@
+.paper-links{
+    border-radius:13px;
+    text-decoration: none;
+}
+.paper-links ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.paper-links ul li{
+    background-color: #ECF1F6;
+    /* margin-left: 7px;
+    margin-right: 7px;*/
+    margin-bottom: 7px; 
+    border-radius: 5px;
+}
+.paper-links ul li{
+    color:black;
+    padding: 20px 25px;
+    font-family: "Cormorant Garamond", Sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.paper-links ul li a{
+    color:black;
+    text-decoration: none;
+}
+.paper-links ul li.active a{
+    text-decoration: none;
+    color:white;
+}
+.paper-links ul li a:hover{
+    text-decoration: none;
+    color:white;
+}
+.paper-links ul li.active{
+    background-color: #FFBA4F;
+    color:white;
+    text-decoration: none;
+}
+
+
+
+
+.title-paper{
+    color: black;
+    padding: 0px 0px 26px 4px;
+}
+
+/*For profile page tab alignment  */
+#my-paper-links{
+    margin-left: 1em;
+}
+
+.d-none{
+display: none;
+}
