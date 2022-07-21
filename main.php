@@ -31,7 +31,7 @@ $dotenv->load(__DIR__.'/.env');
 
 $giturl = isset($_ENV['GIT_URL'])?$_ENV['GIT_URL']:'';
 $repo_name = isset($_ENV['REPO_NAME'])?$_ENV['REPO_NAME']:'';
-$TOKEN = isset($_ENV['TOKEN'])?$_ENV['TOKEN']:'';
+$TOKEN = isset($_ENV['GIT_AUT'])?$_ENV['GIT_AUT']:'';
 
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	$giturl,
