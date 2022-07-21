@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package  PaperSubmissionSystem
+ * @package  
  */
 /*
 Plugin Name: 
