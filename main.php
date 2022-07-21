@@ -22,13 +22,21 @@ defined( 'ABSPATH' ) or die( 'Hey, what are you doing here? You silly human!' );
 if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 }
-
-
 require_once dirname( __FILE__ ) .'/plugin-update-checker/plugin-update-checker.php';
+
+use Symfony\Component\Dotenv\Dotenv;
+$dotenv = new Dotenv();
+$dotenv->load(__DIR__.'/.env');
+
+
+$giturl = isset($_ENV['GIT_URL'])?$_ENV['GIT_URL']:'';
+$repo_name = isset($_ENV['REPO_NAME'])?$_ENV['REPO_NAME']:'';
+$TOKEN = isset($_ENV['TOKEN'])?$_ENV['TOKEN']:'';
+
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/githubusername/repo-name',
+	$giturl,
 	__FILE__, //Full path to the main plugin file or functions.php.
-	'repo-name'
+	$repo_name
 );
 
 
@@ -37,7 +45,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 $myUpdateChecker->setBranch('main');
 
 //Optional: If you're using a private repository, specify the access token like this:
-$myUpdateChecker->setAuthentication('ghp_KTUrNnesT9cevFhsv4NopiuYEy9vMp1ekPan');
+$myUpdateChecker->setAuthentication($TOKEN);
 
 //comment added to check the updater
 

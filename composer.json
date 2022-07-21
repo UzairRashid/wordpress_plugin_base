@@ -4,7 +4,8 @@
     "license": "GPL-3.0",
     "minimum-stability": "dev",
     "require": {
-        "shuchkin/simplexlsx": "dev-master"
+        "shuchkin/simplexlsx": "dev-master",
+        "symfony/dotenv": "5.4.x-dev"
     },
     "autoload": {
         "psr-4": {"Inc\\": "./inc"}
