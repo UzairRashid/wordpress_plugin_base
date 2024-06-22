@@ -52,18 +52,18 @@ $myUpdateChecker->setAuthentication($TOKEN);
 /**
  * The code that runs during plugin activation
  */
-function activate_paper_plugin() {
+function activate_plugin_name_plugin() {
 	Inc\Base\Activate::activate();
 }
-register_activation_hook( __FILE__, 'activate_paper_plugin' );
+register_activation_hook( __FILE__, 'activate_plugin_name_plugin' );
 
 /**
  * The code that runs during plugin deactivation
  */
-function deactivate_paper_plugin() {
+function deactivate_plugin_name_plugin() {
 	Inc\Base\Deactivate::deactivate();
 }
-register_deactivation_hook( __FILE__, 'deactivate_paper_plugin' );
+register_deactivation_hook( __FILE__, 'deactivate_plugin_name_plugin' );
 
 /**
  * Initialize all the core classes of the plugin
